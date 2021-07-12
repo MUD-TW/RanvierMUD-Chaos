@@ -24,11 +24,32 @@ $ git clone https://github.com/MUD-TW/RanvierMUD-Chaos.git
 
 # 安裝依賴
 $ cd RanvierMUD-Chaos
-$ npm install
-$ npm run init
+$ npm install && npm run init
 
 # 啟動服務
 $ npm run start
+```
+
+## 登入流程
+
+```
+                      intro (MOTD)
+                        |
+      (new account) __login__  (existing account)
+                   /         \
+     create-account           password----------------------
+        |                            |                     |
+  change-password              choose-character      change-password
+        |                            |
+  create-player                      |
+        |                            |
+  player-name-check                  |
+        |                            |
+  finish-player                      |
+        |__________________________done (add player to game world)
+                                     |
+                                   commands
+             (command prompt, all player input after login goes through this event)
 ```
 
 ## 授權許可

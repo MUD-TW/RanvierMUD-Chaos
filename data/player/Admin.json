@@ -35,21 +35,188 @@
   },
   "level": 1,
   "name": "Admin",
-  "room": "limbo:white",
-  "effects": [],
-  "experience": 0,
+  "room": "limbo:black",
+  "effects": [
+    {
+      "config": {
+        "autoActivate": true,
+        "description": "You are regenerating over time.",
+        "duration": "inf",
+        "hidden": true,
+        "maxStacks": 0,
+        "name": "Regenerate",
+        "persists": true,
+        "refreshes": false,
+        "tickInterval": 3,
+        "type": "regen",
+        "unique": true
+      },
+      "elapsed": 1337415,
+      "id": "regen",
+      "remaining": null,
+      "state": {
+        "magnitude": 15,
+        "lastTick": 2758,
+        "ticks": 437
+      }
+    }
+  ],
+  "experience": 264,
   "inventory": {
-    "items": [],
+    "items": [
+      [
+        "d7ece870-8b2d-40bb-b418-774ac0123932",
+        {
+          "entityReference": "limbo:sliceofcheese",
+          "inventory": null,
+          "metadata": {},
+          "description": "A yellow, slightly moldy slice of cheese. Only a rat could find this appetizing.",
+          "keywords": [
+            "slice",
+            "cheese",
+            "moldy"
+          ],
+          "name": "Slice of Cheese",
+          "roomDesc": "A moldy slice of cheese",
+          "closed": false,
+          "locked": false,
+          "behaviors": {
+            "decay": {
+              "duration": 240
+            }
+          }
+        }
+      ],
+      [
+        "e45744f2-0732-462d-8c82-6cb91345dc5d",
+        {
+          "entityReference": "limbo:test_key",
+          "inventory": null,
+          "metadata": {
+            "quality": "common"
+          },
+          "description": "This key seems overly complex with numerous grooves.",
+          "keywords": [
+            "key",
+            "odd",
+            "oddly",
+            "shaped"
+          ],
+          "name": "Oddly-shaped Key",
+          "roomDesc": "A strange looking key",
+          "closed": false,
+          "locked": false,
+          "behaviors": {}
+        }
+      ],
+      [
+        "4ebfd8c8-d316-493e-a004-74fe1aad57c4",
+        {
+          "entityReference": "limbo:sliceofcheese",
+          "inventory": null,
+          "metadata": {},
+          "description": "A yellow, slightly moldy slice of cheese. Only a rat could find this appetizing.",
+          "keywords": [
+            "slice",
+            "cheese",
+            "moldy"
+          ],
+          "name": "Slice of Cheese",
+          "roomDesc": "A moldy slice of cheese",
+          "closed": false,
+          "locked": false,
+          "behaviors": {
+            "decay": {
+              "duration": 240
+            }
+          }
+        }
+      ]
+    ],
     "max": 16
   },
   "metadata": {
-    "class": "warrior"
+    "class": "warrior",
+    "currencies": {
+      "gold": 55
+    }
   },
-  "playerClass": "warrior",
   "prompt": "[ %health.current%/%health.max% <b>hp</b> %energy.current%/%energy.max% <b>energy</b> ]",
   "quests": {
     "completed": [],
-    "active": []
+    "active": [
+      [
+        "limbo:journeybegins",
+        {
+          "state": [
+            {
+              "state": {
+                "count": 0
+              },
+              "progress": {
+                "percent": 0,
+                "display": "Find a Weapon: [0/1]"
+              },
+              "config": {
+                "title": "Find a Weapon",
+                "removeItem": false,
+                "count": 1,
+                "item": "limbo:rustysword"
+              }
+            },
+            {
+              "state": {
+                "count": 0
+              },
+              "progress": {
+                "percent": 0,
+                "display": "Find Some Armor: [0/1]"
+              },
+              "config": {
+                "title": "Find Some Armor",
+                "removeItem": false,
+                "count": 1,
+                "item": "limbo:leathervest"
+              }
+            },
+            {
+              "state": {
+                "equipped": false
+              },
+              "progress": {
+                "percent": 0,
+                "display": "Wield A Weapon: Not Equipped"
+              },
+              "config": {
+                "title": "Wield A Weapon",
+                "slot": "wield"
+              }
+            },
+            {
+              "state": {
+                "equipped": false
+              },
+              "progress": {
+                "percent": 0,
+                "display": "Equip Some Armor: Not Equipped"
+              },
+              "config": {
+                "title": "Equip Some Armor",
+                "slot": "chest"
+              }
+            }
+          ],
+          "progress": {
+            "percent": 0,
+            "display": "Find a Weapon: [0/1]\r\nFind Some Armor: [0/1]\r\nWield A Weapon: Not Equipped\r\nEquip Some Armor: Not Equipped"
+          },
+          "config": {
+            "level": 1,
+            "title": "A Journey Begins"
+          }
+        }
+      ]
+    ]
   },
   "role": 2,
   "equipment": {}
